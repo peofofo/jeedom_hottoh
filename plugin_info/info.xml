@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+    <id>hottoh</id>
+    <name>HOTTOH</name>
+    <description>Plugin pour dialoguer avec les poeles a granulés</description>
+    <icon>appfire_icon</icon>
+    <licence>AGPL</licence>
+    <author>Peofofo</author>
+    <installation>Aucune</installation>
+    <require>1.200</require>
+    <version>1.00</version>
+    <category>Confort</category>
+</info>
+
