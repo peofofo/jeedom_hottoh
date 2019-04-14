@@ -18,16 +18,16 @@
 
 require_once dirname(__FILE__) . '/../../../core/php/core.inc.php';
 
-function vdm_install() {
+function hottoh_install() {
     
 }
 
-function vdm_update() {
+function hottoh_update() {
     
 }
 
 
-function vdm_remove() {
+function hottoh_remove() {
     
 }
 
