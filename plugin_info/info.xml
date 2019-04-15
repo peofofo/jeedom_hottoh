@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <info>
     <id>hottoh</id>
-    <name>HOTTOH</name>
+    <name>hottoh</name>
     <description>Plugin pour dialoguer avec les poeles a granulés</description>
     <icon>appfire_icon</icon>
     <licence>AGPL</licence>
