@@ -1,27 +1,26 @@
 {
-    "plugins/FreeSms/plugin_info/info.xml": {
-        "Plugin pour envoyer des SMS via le service de Free Mobile": "Plugin pour envoyer des SMS via le service de Free Mobile",
-        "Aucune": "Nessuno"
+    "plugins\/Hottoh\/plugin_info\/info.xml": {
+        "Plugin pour dialoguer avec les poeles a granulés": "Plugin pour dialoguer avec les poeles a granulés",
+        "Aucune": "Aucune"
     },
-    "plugins/FreeSms/desktop/php/FreeSms.php": {
-        "Ajouter un numéro": "Ajouter un numéro",
-        "Rechercher": "Cerca",
-        "Général": "Generale",
-        "Nom": "Nome",
-        "Nom de l'équipement Free SMS": "Nom de l'équipement Free SMS",
+    "plugins\/Hottoh\/desktop\/php\/hottoh.php": {
+        "Valeur": "Valeur",
+        "Paramètres": "Paramètres",
+        "Type": "Type",
+        "Général": "Général",
+        "Nom": "Nom",
+        "Nom de l'Équipement": "Nom de l'équipement",
         "Objet parent": "Objet parent",
-        "Aucun": "Nessuno",
-        "Catégorie": "Categoria",
-        "Activer": "Attiva",
-        "Visible": "Visibile",
-        "FreeSms": "FreeSms",
-        "Ajouter un utilisateur FreeSms": "Ajouter un utilisateur FreeSms",
-        "user": "user",
-        "key": "key",
-        "Supprimer": "Elimina",
-        "Sauvegarder": "Salva"
+        "Aucun": "Aucun",
+        "Catégorie": "Catégorie",
+        "Activer": "Activer",
+        "Visible": "Visible",
+        "Adresse IP Direct": "Adresse IP Direct",
+        "APort Local": "Port Local",
+        "Supprimer": "Supprimer",
+        "Sauvegarder": "Sauvegarder"
     },
-    "plugins/FreeSms/desktop/js/FreeSms.js": {
+    "plugins\/Hottoh\/desktop\/js\/hottoh.js": {
         "Tester": "Tester"
     }
 }
