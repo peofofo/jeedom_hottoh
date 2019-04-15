@@ -5,8 +5,8 @@
 	"author" : "Peofofo",
 	"require" : "3.2",
 	"category" : "wellness",
-  	"changelog" : "https://github.com/peofofo/jeedom_hottoh/tree/Stable/docs/#language#/changelog",
-  	"documentation" : "https://github.com/peofofo/jeedom_hottoh/tree/Stable/docs/#language#/index",
+  	"changelog" : "https://github.com/peofofo/jeedom_hottoh/tree/Stable/docs/fr_FR/changelog",
+  	"documentation" : "https://github.com/peofofo/jeedom_hottoh/tree/Stable/docs/fr_FR/index",
 	"hasDependency" : false,
 	"hasOwnDeamon" : false,
 	"maxDependancyInstallTime" : 0
