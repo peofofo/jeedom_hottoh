@@ -1,12 +1,12 @@
 {
 	"id" : "hottoh",
-	"name" : "hottoh",
+	"name" : "Hottoh",
 	"licence" : "AGPL",
 	"author" : "Peofofo",
 	"require" : "3.2",
 	"category" : "wellness",
-  	"changelog" : "",
-  	"documentation" : "",
+  	"changelog" : "https://github.com/peofofo/jeedom_hottoh/tree/Stable/docs/#language#/changelog",
+  	"documentation" : "https://github.com/peofofo/jeedom_hottoh/tree/Stable/docs/#language#/index",
 	"hasDependency" : false,
 	"hasOwnDeamon" : false,
 	"maxDependancyInstallTime" : 0
