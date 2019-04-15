@@ -3,7 +3,7 @@
     <id>hottoh</id>
     <name>Hottoh</name>
     <description>Plugin pour dialoguer avec les poeles a granulés</description>
-    <icon>appfire_icon</icon>
+    <icon>hottoh_icon</icon>
     <licence>AGPL</licence>
     <author>Peofofo</author>
     <installation>Aucune</installation>
