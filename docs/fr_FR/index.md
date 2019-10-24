@@ -35,7 +35,7 @@ Visualisation des commandes suivantes :
 
 - Allumer : (Retourne 0 ou 1) 
 
-- Etat : (Retourne 0 lorsque le poele est éteind, 1 à 7 lors du démarrage, 8 poele en fonctionnement normal, 9 à 10 arrêt du poele en cours, 51 Alarme A01 : La flamme ne s'allume pas, 52 Alarme A02 : Extinction anormal du feu (manque pellets), 53 Alarme A03 : La température du réservoir à pellet dépasse le seuil de sécurité, 54 Alarme A04 : La température des fumées d'évacation a dépassé les limites de sécurité, 55 Alarme A05 : Difficulté du tirage ou obstruction du brasier, 58 Alarme A08 : Fonctionnement anormal du ventilateur fumées, 59 Alarme A09 : La sonde fumée est endomagée) 
+- Etat : (Retourne 0 lorsque le poele est éteind, 1 à 7 lors du démarrage, 8 poele en fonctionnement normal, 9 à 10 arrêt du poele en cours, 51 Alarme A01 : La flamme ne s'allume pas, 52 Alarme A02 : Extinction anormal du feu (manque pellets), 53 Alarme A03 : La température du réservoir à pellet dépasse le seuil de sécurité, 54 Alarme A04 : La température des fumées d'évacation a dépassé les limites de sécurité, 55 Alarme A05 : Difficulté du tirage ou obstruction du brasier, 58 Alarme A08 : Fonctionnement anormal du ventilateur fumées, 59 Alarme A09 : La sonde fumée est endomagée, 68 Alarme A18 : porte ouverte ou volet de combustible ouvert ou pressostat air) 
 
 - Fabriquant : (retourne le type de fabriquant | Information)
 
