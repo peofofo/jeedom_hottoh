@@ -24,10 +24,13 @@ require 'Getstatus0.class.php';
 require 'Getstatus2.class.php';
 require 'Getchronotemperature.class.php';
 
+$ip = (empty($_GET['ip'])) ? '192.168.0.251' : $_GET['ip'];
+$port = (empty($_GET['port'])) ? '5001' : $_GET['port'];
+
 $socket= new Socket;
 $socket->CreateSocket();
-$socket->setAdresse("192.168.0.250");
-$socket->setPort(5001);
+$socket->setAdresse($ip);
+$socket->setPort($port);
 $socket->ConnectSocket();
 
 //$requete = "#00016A---0002DATR0;3E71\n";
