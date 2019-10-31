@@ -1,3 +1,3 @@
 # 01/04/2019
 
-- Création du plugin
+- CrÃ©ation du plugin
