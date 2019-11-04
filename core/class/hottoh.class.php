@@ -502,9 +502,7 @@ class hottoh extends eqLogic {
       	$hottohCmd->setConfiguration('type','temperature');
       	//$hottohCmd->setConfiguration('repeatEventManagement','always');
         $hottohCmd->setUnite( '°C' );
-        $hottohCmd->save();
-      
-      	log::add('hottoh', 'debug', 't2');	
+        $hottohCmd->save();	
       
       	$hottohCmd = $this->getCmd(null, 't2');
         if (!is_object($hottohCmd)) {
@@ -685,8 +683,13 @@ class hottoh extends eqLogic {
       	$hottohCmd->setValue($this->getCmd(null, 'pset')->getId());
       	$hottohCmd->setConfiguration('type','puissance');
       	$hottohCmd->setConfiguration('minValue', 0);
-        $hottohCmd->setConfiguration('maxValue', 5);
-      	//$hottohCmd->setConfiguration('repeatEventManagement','always');
+       	if($this->getCmd(null, 'pmax')->execCmd()!=5){
+          $hottohCmd->setConfiguration('maxValue', $this->getCmd(null, 'pmax')->execCmd());
+          log::add('hottoh', 'debug', 'Nouvelle valeur pmax:'.$this->getCmd(null, 'pmax')->execCmd());
+        }
+      	else{
+        	$hottohCmd->setConfiguration('maxValue', 5);
+        }
         $hottohCmd->save();
       
       	$hottohCmd = $this->getCmd(null, 'pmin');
