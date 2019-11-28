@@ -670,28 +670,6 @@ class hottoh extends eqLogic {
       	//$hottohCmd->setConfiguration('repeatEventManagement','always');
         $hottohCmd->save();
       
-      	$hottohCmd = $this->getCmd(null, 'pset_action');
-        if (!is_object($hottohCmd)) {
-            $hottohCmd = new hottohCmd();
-            $hottohCmd->setName(__('Niveau Puissance', __FILE__));
-        }
-        $hottohCmd->setLogicalId('pset_action');
-        $hottohCmd->setEqLogic_id($this->getId());
-        //$hottohCmd->setDisplay("Niveau de puissance",0);
-      	$hottohCmd->setType('action');
-        $hottohCmd->setSubType('slider');
-      	$hottohCmd->setValue($this->getCmd(null, 'pset')->getId());
-      	$hottohCmd->setConfiguration('type','puissance');
-      	$hottohCmd->setConfiguration('minValue', 0);
-       	if($this->getCmd(null, 'pmax')->execCmd()!=5){
-          $hottohCmd->setConfiguration('maxValue', $this->getCmd(null, 'pmax')->execCmd());
-          log::add('hottoh', 'debug', 'Nouvelle valeur pmax:'.$this->getCmd(null, 'pmax')->execCmd());
-        }
-      	else{
-        	$hottohCmd->setConfiguration('maxValue', 5);
-        }
-        $hottohCmd->save();
-      
       	$hottohCmd = $this->getCmd(null, 'pmin');
         if (!is_object($hottohCmd)) {
             $hottohCmd = new hottohCmd();
@@ -718,6 +696,28 @@ class hottoh extends eqLogic {
         $hottohCmd->setSubType('numeric');
       	$hottohCmd->setConfiguration('type','puissance');
       	//$hottohCmd->setConfiguration('repeatEventManagement','always');
+        $hottohCmd->save();
+	    
+	$hottohCmd = $this->getCmd(null, 'pset_action');
+        if (!is_object($hottohCmd)) {
+            $hottohCmd = new hottohCmd();
+            $hottohCmd->setName(__('Niveau Puissance', __FILE__));
+        }
+        $hottohCmd->setLogicalId('pset_action');
+        $hottohCmd->setEqLogic_id($this->getId());
+        //$hottohCmd->setDisplay("Niveau de puissance",0);
+      	$hottohCmd->setType('action');
+        $hottohCmd->setSubType('slider');
+      	$hottohCmd->setValue($this->getCmd(null, 'pset')->getId());
+      	$hottohCmd->setConfiguration('type','puissance');
+      	$hottohCmd->setConfiguration('minValue', 0);
+       	if($this->getCmd(null, 'pmax')->execCmd()!=5){
+          $hottohCmd->setConfiguration('maxValue', $this->getCmd(null, 'pmax')->execCmd());
+          log::add('hottoh', 'debug', 'Nouvelle valeur pmax:'.$this->getCmd(null, 'pmax')->execCmd());
+        }
+      	else{
+        	$hottohCmd->setConfiguration('maxValue', 5);
+        }
         $hottohCmd->save();
       
       	$hottohCmd = $this->getCmd(null, 'fanfumee');
