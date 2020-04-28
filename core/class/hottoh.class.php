@@ -55,31 +55,6 @@ class hottoh extends eqLogic {
 		  }	
     }
      
-
-	/*public static function cronHourly($_eqLogic_id = null) {
-		if ($_eqLogic_id == null) { // La fonction nâ€™a pas dâ€™argument donc on recherche tous les Ã©quipements du plugin
-			$eqLogics = self::byType('hottoh', true);
-		} else {// La fonction a lâ€™argument id(unique) dâ€™un Ã©quipement(eqLogic
-			$eqLogics = array(self::byId($_eqLogic_id));
-		}		  
-	
-		foreach ($eqLogics as $hottoh) {//parcours tous les Ã©quipements du plugin vdm
-			if ($hottoh->getIsEnable() == 1) {//vÃ©rifie que l'Ã©quipement est acitf
-				$cmd = $hottoh->getCmd(null, 'refresh');//retourne la commande "refresh si elle exxiste
-				if (!is_object($hottoh)) {//Si la commande n'existe pas
-				  continue; //continue la boucle
-				}
-				$cmd->execCmd(); // la commande existe on la lance
-			}
-		}
-	}*/
-  
-  	 /*public static function start() {
-        foreach (eqLogic::byType('hottoh', true) as $heliotrope) {
-                //log::add('hottoh', 'debug', 'info daily');
-                $this->Lecture_parametre();
-        }
-    }*/
 	public function Ecriture_parametre($setvalue){
       	      	log::add('hottoh', 'debug', 'Ecriture_parametre');
         //$setvalue = new Setvalue(Setvalue::PARAM_NIVEAU_FAN_1,3);
@@ -241,35 +216,8 @@ class hottoh extends eqLogic {
       else{
         log::add('hottoh', 'error', 'Erreur de connection');
       }
-      
-      	/*$hottohCmd = $this->getCmd(null, 'tfumee');
-        if (is_object($hottohCmd)) {
-            $value = $getstatus0->getSmokeT();
-            $hottohCmd->setConfiguration('value',$value);
-            $hottohCmd->save();
-            $hottohCmd->event($value);
-        }*/
-        //log::add('hottoh', 'debug', 'Statut ' . $getstatus0->getStoveState();
-        //$this->refreshWidget();
     }
   
-	/*public function randomHottoh() {
-		$type = $this->getConfiguration("type");
-		if($type == "") { //si le paramÃ¨tre est vide ou nâ€™existe pas
-			$type = "aleatoire";
-		}		
-		$url = "http://www.viedemerde.fr/" .$type  ;
-		$data = file_get_contents($url);
-		@$dom = new DOMDocument();
-		libxml_use_internal_errors(true);
-		$dom->loadHTML($data);
-		libxml_use_internal_errors(false);
-		$xpath = new DOMXPath($dom);
-		$divs = $xpath->query('//article[@class="art-panel col-xs-12"]//div[@class="panel-content"]//p//a');
-		return $divs[0]->nodeValue ;
-	}*/
-
-
     /*     * *********************MÃ©thodes d'instance************************* */
 
     public function preInsert() {
@@ -283,17 +231,6 @@ class hottoh extends eqLogic {
     public function preSave() {
       	log::add('hottoh', 'debug', 'presave');
       
-      	//Test connection
-      	
-		/*$this->setDisplay("width","400px");
-		$this->setDisplay("showNameOndashboard",0);
-		if($this->getConfiguration("type") == "") { //si le paramÃ¨tre est vide ou nâ€™existe pas
-			$this->setConfiguration("type","aleatoire");// on le dÃ©finit par aleatoire
-		}
-      	if(!$this->getConfiguration('ipDirect', '')) { 
-			$this->setConfiguration("ipDirect","192.168.1.1");
-        if(!$this->getConfiguration('localPort', '')) { 
-			$this->setConfiguration("localPort","5001");*/
     }
 
 
@@ -1461,46 +1398,6 @@ class hottoh extends eqLogic {
     public function postRemove() {
         
     }
-  	
-  	/*public function setupCron() {
-        $setting = config::byKey('cron','hottoh');
-        $cron = cron::byClassAndFunction('hottoh', 'pull');
-        if (!is_object($cron)) {
-            $cron = new cron();
-            $cron->setClass('hottoh');
-            $cron->setFunction('pull');
-            $cron->setEnable(1);
-            $cron->setDeamon(0);
-        }
-        if ($setting == '60') {
-            $cron->setSchedule('0 * * * *');
-        } else {
-            $cron->setSchedule('*//*'. $setting . ' * * * *');
-        }
-        $cron->save();
-        return true;
-    }*/
-
-    /*
-     * Non obligatoire mais permet de modifier l'affichage du widget si vous en avez besoin
-      public function toHtml($_version = 'dashboard') {
-
-      }
-     */
-
-    /*
-     * Non obligatoire mais ca permet de dÃ©clencher une action aprÃ¨s modification de variable de configuration
-    public static function postConfig_<Variable>() {
-    }
-     */
-
-    /*
-     * Non obligatoire mais ca permet de dÃ©clencher une action avant modification de variable de configuration
-    public static function preConfig_<Variable>() {
-    }
-     */
-
-    /*     * **********************Getteur Setteur*************************** */
 }
 
 class hottohCmd extends cmd {
@@ -1511,13 +1408,6 @@ class hottohCmd extends cmd {
 
 
     /*     * *********************Methode d'instance************************* */
-
-    /*
-     * Non obligatoire permet de demander de ne pas supprimer les commandes mÃªme si elles ne sont pas dans la nouvelle configuration de l'Ã©quipement envoyÃ© en JS
-      public function dontRemoveCmd() {
-      return true;
-      }
-     */
 
     public function execute($_options = array()) {
 		$eqlogic = $this->getEqLogic(); //rÃ©cupÃ¨re l'Ã©qqlogic de la commande $this
@@ -1583,11 +1473,9 @@ class hottohCmd extends cmd {
 				break;
 		}
     }
-  	/*
-    else {
-      return $this->getConfiguration('value');
+    public function dontRemoveCmd() {
+	return true;
     }
-    /*     * **********************Getteur Setteur*************************** */
 }
 
 
