@@ -58,7 +58,7 @@ class Setvalue {
       	elseif($this->param==self::PARAM_ECO_MODE)
           	$this->erreur = ($this->value==0 || $this->value==1) ? false : true;
       	elseif($this->param==self::PARAM_NIVEAU_PUISSANCE)
-          	$this->erreur = ($this->value>=0 && $this->value<=5) ? false : true;
+          	$this->erreur = ($this->value>=0 && $this->value<=20) ? false : true;
       	elseif($this->param==self::PARAM_AMBIANCE_TEMPERATURE_1)
           	$this->erreur = ($this->value>=15 && $this->value<=30) ? false : true;
       	elseif($this->param==self::INCONNU_4)
