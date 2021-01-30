@@ -647,7 +647,13 @@ class hottoh extends eqLogic {
         $hottohCmd->setSubType('slider');
       	$hottohCmd->setValue($this->getCmd(null, 'pset')->getId());
       	$hottohCmd->setConfiguration('type','puissance');
-      	$hottohCmd->setConfiguration('minValue', 0);
+	if($this->getCmd(null, 'pmin')->execCmd()!=0){
+          $hottohCmd->setConfiguration('minValue', $this->getCmd(null, 'pmin')->execCmd());
+          log::add('hottoh', 'debug', 'Nouvelle valeur pmin:'.$this->getCmd(null, 'pmin')->execCmd());
+        }
+      	else{
+        	$hottohCmd->setConfiguration('minValue', 0);
+        }
        	if($this->getCmd(null, 'pmax')->execCmd()!=5){
           $hottohCmd->setConfiguration('maxValue', $this->getCmd(null, 'pmax')->execCmd());
           log::add('hottoh', 'debug', 'Nouvelle valeur pmax:'.$this->getCmd(null, 'pmax')->execCmd());
