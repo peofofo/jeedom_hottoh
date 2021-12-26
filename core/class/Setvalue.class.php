@@ -69,6 +69,8 @@ class Setvalue {
           	$this->erreur = ($this->value>=0 && $this->value<=5) ? false : true;
       	elseif($this->param==self::PARAM_NIVEAU_FAN_3)
           	$this->erreur = ($this->value>=0 && $this->value<=5) ? false : true;
+	elseif($this->param==self::PARAM_CHRONO_ON_OFF)
+    		$this->erreur = ($this->value>=0 && $this->value<=5) ? false : true;
       	elseif($this->param==self::PARAM_CHRONO_TEMPERATURE_1)
           	$this->erreur = ($this->value>=15 && $this->value<=30) ? false : true;
       	elseif($this->param==self::PARAM_CHRONO_TEMPERATURE_2)
