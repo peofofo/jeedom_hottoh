@@ -1439,7 +1439,7 @@ class hottohCmd extends cmd {
 				break;
             case 'timer_on': // Passage chrono a ON
             	log::add('hottoh', 'debug', 'Activation du mode chrono');
-            	$eqlogic->Ecriture_parametre(new Setvalue(Setvalue::PARAM_CHRONO_ON_OFF,1));
+            	$eqlogic->Ecriture_parametre(new Setvalue(Setvalue::PARAM_CHRONO_ON_OFF,2));
 				break;
             case 'timer_off': // Passage chrono a OFF
             	log::add('hottoh', 'debug', 'Arrêt du mode chrono');
