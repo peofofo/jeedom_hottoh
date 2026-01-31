@@ -21,8 +21,8 @@
 //require 'Socket.class.php';
   //////////////////////////////////////////////////////
     // CCITT, X24
-    define(CRC16POLYN,0x1021);
-    define(CRC16POLYI,0x8408);
+    define('CRC16POLYN',0x1021);
+    define('CRC16POLYI',0x8408);
   
 class Requete {
   	private $id=0;
@@ -40,12 +40,12 @@ class Requete {
       	$this->type=$type;
       	$this->parametres=$parametres;
     	$this->buildRawPacket();
-      	Socket::setGlobalId();
+      	HottohSocket::setGlobalId();
     }
   
   
   	private function buildRawPacket(){
-    	$str1=sprintf("%05d", Socket::getGlobalId());
+    	$str1=sprintf("%05d", HottohSocket::getGlobalId());
       	$str2=$this->getRawData();
       	$str3=$str1."A---".$str2;
       	$str4=$this->getCRC($str3);
@@ -154,5 +154,3 @@ class Requete {
   }
 }
 ?>
-
-

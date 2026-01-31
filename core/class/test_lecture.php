@@ -18,16 +18,17 @@
 
 /* * ***************************Includes********************************* */
 //require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
-require 'Socket.class.php';
-require 'Requete.class.php';
-require 'Getstatus0.class.php';
-require 'Getstatus2.class.php';
-require 'Getchronotemperature.class.php';
+require_once 'HottohSocket.class.php';
+require_once 'Requete.class.php';
+require_once 'Getstatus0.class.php';
+require_once 'Getstatus2.class.php';
+require_once 'Getchronotemperature.class.php';
 
-$ip = (empty($_GET['ip'])) ? '192.168.0.251' : $_GET['ip'];
+
+$ip = (empty($_GET['ip'])) ? '192.168.1.250' : $_GET['ip'];
 $port = (empty($_GET['port'])) ? '5001' : $_GET['port'];
 
-$socket= new Socket;
+$socket= new HottohSocket;
 $socket->CreateSocket();
 $socket->setAdresse($ip);
 $socket->setPort($port);
@@ -78,5 +79,3 @@ $getstatus2->toString();
 $socket->CloseSocket();
 
 ?>
-
-
