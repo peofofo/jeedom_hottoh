@@ -1,0 +1,26 @@
+{
+    "plugins\/Hottoh\/plugin_info\/info.xml": {
+        "Plugin pour dialoguer avec les poeles a granulés": "Plugin pour dialoguer avec les poeles a granulés",
+        "Aucune": "Aucune"
+    },
+    "plugins\/Hottoh\/desktop\/php\/hottoh.php": {
+        "Valeur": "Valeur",
+        "Paramètres": "Paramètres",
+        "Type": "Type",
+        "Général": "Général",
+        "Nom": "Nom",
+        "Nom de l'Équipement": "Nom de l'équipement",
+        "Objet parent": "Objet parent",
+        "Aucun": "Aucun",
+        "Catégorie": "Catégorie",
+        "Activer": "Activer",
+        "Visible": "Visible",
+        "Adresse IP Direct": "Adresse IP Direct",
+        "APort Local": "Port Local",
+        "Supprimer": "Supprimer",
+        "Sauvegarder": "Sauvegarder"
+    },
+    "plugins\/Hottoh\/desktop\/js\/hottoh.js": {
+        "Tester": "Tester"
+    }
+}
